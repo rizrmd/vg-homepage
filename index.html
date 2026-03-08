@@ -28,7 +28,7 @@
             text-align: center;
             padding: 60px 20px;
             background: linear-gradient(180deg, rgba(13,13,26,0) 0%, rgba(13,13,26,0.9) 100%),
-                        url('https://raw.githubusercontent.com/rizrmd/triarc-slice/main/assets/places/cave.webp') center/cover no-repeat;
+                        url('assets/cave.png') center/cover no-repeat;
         }
         .hero-section::before {
             content: '';
@@ -478,14 +478,13 @@
             card.className = 'hero-card';
 
             let poseContent = '';
-            const baseUrl = 'https://raw.githubusercontent.com/rizrmd/triarc-slice/main/data/hero';
             if (hero.hasCharFg) {
-                poseContent = `<img src="${baseUrl}/${hero.id}/img/pose-char-fg.webp" alt="${hero.name}">`;
+                poseContent = `<img src="assets/hero-images/${hero.id}-char-fg.png" alt="${hero.name}">`;
                 if (hero.hasShadow) {
-                    poseContent += `<img src="${baseUrl}/${hero.id}/img/pose-shadow.webp" alt="${hero.name} shadow" class="shadow-img" style="z-index: -1;">`;
+                    poseContent += `<img src="assets/hero-images/${hero.id}-shadow.png" alt="${hero.name} shadow" class="shadow-img" style="z-index: -1;">`;
                 }
             } else if (hero.hasShadow) {
-                poseContent = `<img src="${baseUrl}/${hero.id}/img/pose-shadow.webp" alt="${hero.name}">`;
+                poseContent = `<img src="assets/hero-images/${hero.id}-shadow.png" alt="${hero.name}">`;
             } else {
                 poseContent = `<div class="no-pose">No pose available</div>`;
             }
